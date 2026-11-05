@@ -15,8 +15,10 @@
 - `docker run -d -p 8080:80 nginx`: Nginx 서버 실행
 
 ### Git
-- `git config --global user.name "이름"`: 사용자 이름 설정
-- `git config --global user.email "이메일"`: 사용자 이메일 설정
+- `git config --global user.name "jooyoung"`: 사용자 이름 설정
+- `git config --global user.email "jooyoung0517@gmail.com"`: 사용자 이메일 설정
 
 ## 📝 메모
 - 처음에는 폴더 찾기가 어려웠지만, VSCode 터미널을 통해 직접 생성하는 법을 배웠음!
+git init
+git remote add origin https://github.com/jooyoung0517-lab/jooyoung.git
