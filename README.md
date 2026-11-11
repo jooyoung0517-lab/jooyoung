@@ -13,6 +13,15 @@
 - `index.html`: 사용자에게 보여지는 메인 웹 페이지
 - `Dockerfile`: Nginx 이미지를 기반으로 한 웹 서버 설정 파일
 
+프로젝트 구조
+```text
+.
+├── index.html          # 웹 서버 메인 페이지
+├── Dockerfile          # Docker 이미지 빌드 설정
+├── result.png          # 실행 결과 캡처 이미지
+└── README.md           # 프로젝트 문서
+```
+
 ## ⚙️ 실행 방법
 
 ### 1. 도커 이미지 빌드
@@ -24,13 +33,14 @@ docker build -t my-web-server .
 ![웹 서버 실행 화면](./result.png)
 
 
-트러블슈팅 및 해결
+##트러블슈팅 및 해결
 
 ### 1. Docker 권한 문제 (Permission Denied)
 - **문제**: Ubuntu 환경에서 `docker ps`나 빌드 시 권한 오류 발생.
 - **원인**: 기본적으로 Docker 데몬은 root 권한이 필요함.
 - **해결**: `/var/run/docker.sock` 파일의 권한을 변경하여 해결.
   ```bash
+  ```
   sudo chmod 666 /var/run/docker.sock
 
   주요 학습 내용
