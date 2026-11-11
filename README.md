@@ -40,7 +40,11 @@
 sudo chmod 666 /var/run/docker.sock
 ```
 🎓 주요 학습 내용
-WSL2 & Ubuntu: 윈도우 환경에서 리눅스 개발 환경을 구축하는 법을 익힘.
-Docker: Dockerfile을 작성하여 나만의 웹 서버 이미지를 만들고 컨테이너화함.
-Git & GitHub: 로컬 작업물을 원격 저장소에 관리하고 협업 환경을 이해함.
-VSCode Remote: WSL2와 VSCode를 연동하여 효율적인 개발 워크플로우를 구축함.
+
+**WSL2 & Ubuntu**: 윈도우 환경에서 리눅스 개발 환경을 구축하는 법을 익힘.
+
+**Docker**: Dockerfile을 작성하여 나만의 웹 서버 이미지를 만들고 컨테이너화함.
+
+**Git & GitHub**: 로컬 작업물을 원격 저장소에 관리하고 협업 환경을 이해함.
+
+**VSCode Remote**: WSL2와 VSCode를 연동하여 효율적인 개발 워크플로우를 구축함.
