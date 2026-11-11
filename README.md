@@ -39,7 +39,7 @@
 ```
 sudo chmod 666 /var/run/docker.sock
 ```
-🎓 주요 학습 내용
+## 🎓 주요 학습 내용
 
 **WSL2 & Ubuntu**: 윈도우 환경에서 리눅스 개발 환경을 구축하는 법을 익힘.
 
