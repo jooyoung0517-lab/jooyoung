@@ -16,6 +16,8 @@
 ### 1. 도커 이미지 빌드
 ```bash
 docker build -t my-web-server .
+```
 
 ## 📸 실행 결과
 ![웹 서버 실행 화면](./result.png)
+
