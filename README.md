@@ -22,3 +22,19 @@
 - 처음에는 폴더 찾기가 어려웠지만, VSCode 터미널을 통해 직접 생성하는 법을 배웠음!
 git init
 git remote add origin https://github.com/jooyoung0517-lab/jooyoung.git
+
+
+# 나의 첫 개발 워크스테이션 프로젝트
+
+## 🚀 프로젝트 소개
+Docker와 Git을 활용하여 Nginx 웹 서버를 구축하는 실습입니다.
+
+## 🛠 사용 기술
+- Docker (Container)
+- Nginx (Web Server)
+- Git / GitHub (Version Control)
+
+## 🏃 실행 방법
+1. 이미지 빌드: `docker build -t my-web-server .`
+2. 컨테이너 실행: `docker run -d -p 8081:80 my-web-server`
+
