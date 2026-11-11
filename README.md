@@ -1,35 +1,19 @@
-# 개발 워크스테이션 구축 및 웹 서버 배포 프로젝트
+# 🚀 개발 워크스테이션 구축 및 웹 서버 배포 프로젝트
 
-## 1. 프로젝트 구조 (#10 관련)
-- 현재 작업 디렉토리의 구조입니다.
-```text
-practice/
-├── Dockerfile        # 커스텀 웹 서버 이미지를 빌드하기 위한 설정 파일
-├── index.html        # 웹 서버에 표시될 메인 페이지
-└── README.md         # 프로젝트 문서 및 실습 기록
+이 프로젝트는 Docker, Git, 그리고 Ubuntu(WSL2) 환경을 활용하여 기본적인 개발 워크스테이션을 구축하고, 간단한 웹 서버를 컨테이너화하여 배포하는 과정을 담고 있습니다.
 
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
+## 🛠 사용 기술 및 환경
+- **OS**: Windows 11 (WSL2 - Ubuntu 22.04 LTS)
+- **Tools**: Docker Desktop, VSCode, Git
+- **Language/Server**: HTML, Nginx (Docker Image)
 
-To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-    (amd64)
- 3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
+## 📂 프로젝트 구조
+- `index.html`: 사용자에게 보여지는 메인 웹 페이지
+- `Dockerfile`: Nginx 이미지를 기반으로 한 웹 서버 설정 파일
 
-To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
+## ⚙️ 실행 방법
 
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
+### 1. 도커 이미지 빌드
+```bash
+docker build -t my-web-server .
 
-For more examples and ideas, visit:
- https://docs.docker.com/get-started/
-
- ## 🐳 Docker 실습 완료
-- Nginx를 이용한 웹 서버 구축 성공
-- Dockerfile 작성 및 이미지 빌드 완료
-- 컨테이너 실행 및 브라우저 확인 완료 (localhost:8080)
