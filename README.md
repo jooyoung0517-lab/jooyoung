@@ -13,22 +13,42 @@
 
 ## 📂 프로젝트 구조
 ```text
-.
-├── index.html          # 웹 서버 메인 페이지
-├── Dockerfile          # Docker 이미지 빌드 설정
-├── result.png          # 실행 결과 캡처 이미지
-└── README.md           # 프로젝트 문서
+practice/
+├── Dockerfile
+├── index.html
+├── README.md
+├── result.png
+└── screenshots/
+    ├── 01-linux-basic.png
+    ├── 02-file-content.png
+    ├── 03-file-operations.png
+    ├── 04-permissions.png
+    ├── 05-docker-stats.png
+    ├── 06-docker-web.png
+    └── 07-docker-bind-mount.png
 ```
 
-## ⚙️ 실행 방법
+## ⚙️ 주요 실행 방법
 
-### 1) 기본 컨테이너 실행
-`docker run -d -p 8081:80 my-web-server`
-- `localhost:8081`에서 확인 가능
+### Docker 웹 서버 실행
 
-### 2) 바인드 마운트 실행 (실시간 수정 모드)
-`docker run -d -p 8082:80 -v "$(pwd):/usr/share/nginx/html" --name web-mount nginx`
-- `localhost:8082`에서 확인 가능하며, 소스 코드 수정 시 즉시 반영됩니다.
+```bash
+docker build -t jooyoung-web:v1 .
+docker run -d --name jooyoung-web-test -p 8083:80 jooyoung-web:v1
+```
+
+접속 주소: `http://localhost:8083`
+
+### Docker 바인드 마운트 실행
+
+```bash
+docker run -d --name jooyoung-web-mount -p 8084:80 --mount "type=bind,source=$(pwd),target=/usr/share/nginx/html" nginx:latest
+```
+
+접속 주소: `http://localhost:8084`
+
+각 실습의 명령어, 실제 출력 결과, 스크린샷은 아래 상세 실습 기록에서 확인할 수 있습니다.
+
 
 ## 📸 실행 결과
 ![웹 서버 실행 결과](./result.png)
@@ -57,12 +77,9 @@ sudo chmod 666 /var/run/docker.sock
 
 - **VSCode Remote**: WSL2와 VSCode를 연동하여 효율적인 개발 워크플로우를 구축함.
 
-- **바인드 마운트 실습**:
-    - **목적**: 호스트와 컨테이너의 디렉토리를 연결하여 소스 코드 수정 시 실시간 반영 확인
-    - **명령어**: `docker run -d -p 8082:80 -v "$(pwd):/usr/share/nginx/html" --name web-mount nginx`
-    - **결과**: `index.html` 수정 후 새로고침 시 즉각 반영됨 (성공)
 
-    ## 리눅스 기본 명령어 실습
+
+## 리눅스 기본 명령어 실습
 
 ### 실습 목적
 리눅스 터미널에서 현재 경로 확인, 디렉토리 생성 및 이동, 빈 파일 생성을 실습했습니다.
